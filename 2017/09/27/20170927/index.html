@@ -17,7 +17,7 @@
 <meta property="og:description" content="em。。。。感觉移动端总有改不完的bug苹果，安卓有区别大屏，小屏幕区别">
 <meta property="og:locale" content="zh-tw">
 <meta property="og:image" content="//litten.me/img/artImg/09271.jpg">
-<meta property="og:updated_time" content="2018-03-29T11:35:42.437Z">
+<meta property="og:updated_time" content="2019-01-23T07:51:45.311Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="移动端常见问题解决方案">
 <meta name="twitter:description" content="em。。。。感觉移动端总有改不完的bug苹果，安卓有区别大屏，小屏幕区别">
@@ -64,9 +64,9 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔">杂记</a></li>
-	        
 				<li><a href="/tags/">项目</a></li>
+	        
+				<li><a href="/others/">资源汇总</a></li>
 	        
 			</ul>
 		</nav>
@@ -140,9 +140,9 @@
 				
 					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/随笔">杂记</a></li>
-		        
 					<li style="width: 33.333333333333336%"><a href="/tags/">项目</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/others/">资源汇总</a></li>
 		        
 				</ul>
 			</nav>
@@ -183,7 +183,7 @@
 <li>默认不设置viewport一般可以试区宽度在移动端是980</li>
 <li>width 可视区的宽度（number||device-width）注意：number在安卓手机上不兼容</li>
 <li>user-scalable 是否允许用户缩放（yes||no）ios10不兼容</li>
-<li>initial-scale 初始缩放比例 ios10不兼容 </li>
+<li>initial-scale 初始缩放比例 ios10不兼容</li>
 <li>minimum-scale 最小缩放比例 ios10不兼容</li>
 <li>maximum-scale 最大缩放比例 ios10不兼容</li>
 <li>window.devicePixelRatio 像素比（像素比把一个像素放大至N个像素去显示）</li>
@@ -244,10 +244,9 @@
 <ul>
 <li>固定定位fixed</li>
 <li>IOS的body的overflow问题<blockquote>
-<p>body 在ios系统下横向拖动问题（可以在body上设置相对定位和overflow:hidden;在body下面包裹一层元素，在包裹元素上设置overflow:auto）</p>
+<p>body 在ios系统下横向拖动问题（可以在body上设置相对定位和overflow:hidden;在body下面包裹一层元素，在包裹元素上设置overflow:auto）<br>-</p>
 </blockquote>
-</li>
-<li><h2 id="适配"><a href="#适配" class="headerlink" title="适配"></a>适配</h2></li>
+<h2 id="适配"><a href="#适配" class="headerlink" title="适配"></a>适配</h2></li>
 <li>百分比适配</li>
 <li>viewport适配</li>
 </ul>
@@ -322,6 +321,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#viewport-视口（可视区窗口）"><span class="toc-number">1.</span> <span class="toc-text">viewport 视口（可视区窗口）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#移动端viewport设置"><span class="toc-number">1.0.1.</span> <span class="toc-text">移动端viewport设置</span></a></li></ol></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#移动端常见的一些问题"><span class="toc-number">2.</span> <span class="toc-text">移动端常见的一些问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#默认样式"><span class="toc-number">3.</span> <span class="toc-text">默认样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移动端的其他问题"><span class="toc-number">4.</span> <span class="toc-text">移动端的其他问题</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#解决办法："><span class="toc-number">4.0.0.0.1.</span> <span class="toc-text">==解决办法：==</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#适配"><span class="toc-number">5.</span> <span class="toc-text">适配</span></a></li>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -515,15 +527,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">跨域</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">babel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">iscroll</a>
               </li>
              
               <li class="article-tag-list-item">
