@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="//litten.me">
   <title>babel插件开发 | 马文卓</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="写在前面本文将以把es6的语法let改为var为例，讲述如何编写一个babel插件。其中涉及到一些babel的基本知识，babel的工作流程，语法抽象树等。 babel简介关于babel 官网做了如下解释:  Babel 是一个工具链，主要用于在旧的浏览器或环境中将 ECMAScript 2015+ 代码转换为向后兼容版本的 JavaScript 代码  相信大家在开发中或多或少的都使用过babl">
+  <meta name="description" content="写在前面本文将以把es6的语法let改为var为例，讲述如何编写一个babel插件。其中涉及到一些babel的基本知识，babel的工作流程，语法抽象树等。">
 <meta name="keywords" content="babel">
 <meta property="og:type" content="article">
 <meta property="og:title" content="babel插件开发">
 <meta property="og:url" content="//litten.me/2018/07/15/20180715/index.html">
 <meta property="og:site_name" content="马文卓">
-<meta property="og:description" content="写在前面本文将以把es6的语法let改为var为例，讲述如何编写一个babel插件。其中涉及到一些babel的基本知识，babel的工作流程，语法抽象树等。 babel简介关于babel 官网做了如下解释:  Babel 是一个工具链，主要用于在旧的浏览器或环境中将 ECMAScript 2015+ 代码转换为向后兼容版本的 JavaScript 代码  相信大家在开发中或多或少的都使用过babl">
+<meta property="og:description" content="写在前面本文将以把es6的语法let改为var为例，讲述如何编写一个babel插件。其中涉及到一些babel的基本知识，babel的工作流程，语法抽象树等。">
 <meta property="og:locale" content="zh-tw">
 <meta property="og:image" content="https://camo.githubusercontent.com/3edbcbae5d55b2640162c3349df257fad5df783c/687474703a2f2f70302e7168696d672e636f6d2f743031396333376361633732333661363535642e706e67">
-<meta property="og:updated_time" content="2019-01-25T03:14:29.790Z">
+<meta property="og:updated_time" content="2019-02-22T08:01:11.764Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="babel插件开发">
-<meta name="twitter:description" content="写在前面本文将以把es6的语法let改为var为例，讲述如何编写一个babel插件。其中涉及到一些babel的基本知识，babel的工作流程，语法抽象树等。 babel简介关于babel 官网做了如下解释:  Babel 是一个工具链，主要用于在旧的浏览器或环境中将 ECMAScript 2015+ 代码转换为向后兼容版本的 JavaScript 代码  相信大家在开发中或多或少的都使用过babl">
+<meta name="twitter:description" content="写在前面本文将以把es6的语法let改为var为例，讲述如何编写一个babel插件。其中涉及到一些babel的基本知识，babel的工作流程，语法抽象树等。">
 <meta name="twitter:image" content="https://camo.githubusercontent.com/3edbcbae5d55b2640162c3349df257fad5df783c/687474703a2f2f70302e7168696d672e636f6d2f743031396333376361633732333661363535642e706e67">
   
     <link rel="alternative" href="/atom.xml" title="马文卓" type="application/atom+xml">
@@ -66,7 +66,7 @@
 	        
 				<li><a href="/tags/">项目</a></li>
 	        
-				<li><a href="/others/">资源汇总</a></li>
+				<li><a href="/others/">简历</a></li>
 	        
 			</ul>
 		</nav>
@@ -142,7 +142,7 @@
 		        
 					<li style="width: 33.333333333333336%"><a href="/tags/">项目</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/others/">资源汇总</a></li>
+					<li style="width: 33.333333333333336%"><a href="/others/">简历</a></li>
 		        
 				</ul>
 			</nav>
@@ -178,6 +178,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>本文将以把es6的语法<code>let</code>改为<code>var</code>为例，讲述如何编写一个babel插件。其中涉及到一些babel的基本知识，babel的工作流程，语法抽象树等。</p>
+<a id="more"></a>
 <h3 id="babel简介"><a href="#babel简介" class="headerlink" title="babel简介"></a>babel简介</h3><p>关于babel 官网做了如下解释:</p>
 <blockquote>
 <p>Babel 是一个工具链，主要用于在旧的浏览器或环境中将 ECMAScript 2015+ 代码转换为向后兼容版本的 JavaScript 代码</p>
@@ -495,19 +496,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">iscroll</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">项目总结</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
             
             <div class="clearfix"></div>
